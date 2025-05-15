@@ -41,7 +41,7 @@ class MoviesController < ApplicationController
       #redirect user to /movies URL
   end
 
-  def destory
+  def destroy
     the_id = params.fetch("an_id")
 
     matching_records = Movie.where({ :id => the_id })
