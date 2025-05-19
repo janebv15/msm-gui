@@ -8,6 +8,31 @@
 
 <hr>
 
+<h2>Edit this director</h2>
+<form action="/modify_director_record/<%= @the_director.id %>" method="post">
+  <div>
+    <label for="name_box">Name</label>
+    <input id="name_box"   type="text" name="the_director" value="<%= @the_director.name %>">
+  </div>
+
+  <div>
+    <label for="dob_box">Dob</label>
+    <input id="dob_box"    type="date" name="query_dob"    value="<%= @the_director.dob %>">
+  </div>
+
+  <div>
+    <label for="bio_box">Bio</label>
+    <textarea id="bio_box" name="bio_box" rows="3"><%= @the_director.bio %></textarea>
+  </div>
+
+  <div>
+    <label for="image_box">Image</label>
+    <input id="image_box"  type="text" name="query_image" value="<%= @the_director.image %>">
+  </div>
+
+  <button type="submit">Update director</button>
+</form>
+
 <dl>
   <dt>
     Name
